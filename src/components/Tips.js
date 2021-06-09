@@ -17,6 +17,8 @@ const TipCards = styled.div`
     display: flex;
     padding-left: 1em;
     gap: 1em;
+    width: 95%;
+    justify-content: space-between;
 `;
 
 const TipCard = styled.div`
@@ -73,12 +75,12 @@ function Tips() {
                         us going today. (That, plus the coffee.)
                     </p>
                 </TipCard>
-                {/* <TipCard>
+                <TipCard>
                     <span>We Care About You</span>
                     <p>
                         We are committed to bring customers the best experience.
                     </p>
-                </TipCard> */}
+                </TipCard>
             </TipCards>
         </TipsWrapper>
     );

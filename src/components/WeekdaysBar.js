@@ -16,6 +16,7 @@ const Weekday = styled.div`
     flex-direction: column;
     gap: 1em;
     padding: 1em;
+    margin: 1em;
     align-items: center;
     font-size: 0.8em;
     font-weight: bold;
@@ -23,6 +24,14 @@ const Weekday = styled.div`
     background-color: ${(props) => (props.selectd ? "#00704a" : "none")};
     color: ${(props) => (props.selectd ? "white" : "none")};
     box-shadow: ${(props) => (props.selectd ? "#00704a 0px 2px 10px" : "none")};
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #00704a;
+        color: white;
+        box-shadow: #00704a 0px 2px 10px;
+    }
 `;
 
 function WeekdaysBar() {

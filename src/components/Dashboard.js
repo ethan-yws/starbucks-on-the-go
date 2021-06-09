@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Rankings from "./Rankings";
 import Tips from "./Tips";
 
 const DashboardWrapper = styled.div`
@@ -56,6 +57,7 @@ function Dashboard() {
             </HeaderBar>
 
             <Tips />
+            <Rankings />
         </DashboardWrapper>
     );
 }
