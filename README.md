@@ -6,4 +6,4 @@
 
 #### mobile layout
 
-![mobile layout](./screenshots/mobile-layout.png)
+<img height="500" src="./screenshots/mobile-layout.png">
