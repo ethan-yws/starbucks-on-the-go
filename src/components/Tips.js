@@ -11,6 +11,10 @@ const StyledQuote = styled.p`
     & span {
         color: #00704a;
     }
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 const TipCards = styled.div`
@@ -19,6 +23,11 @@ const TipCards = styled.div`
     gap: 1em;
     width: 95%;
     justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const TipCard = styled.div`
@@ -46,6 +55,10 @@ const TipCard = styled.div`
 
     &:hover {
         transform: scale(1.1);
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
     }
 `;
 

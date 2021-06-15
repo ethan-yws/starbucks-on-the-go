@@ -9,6 +9,9 @@ const Wrapper = styled.div`
     justify-content: space-between;
     /* border-top-left-radius: 10px;
     border-top-right-radius: 10px; */
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `;
 
 const Weekday = styled.div`

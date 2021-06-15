@@ -1,54 +1,38 @@
 import React from "react";
 import styled from "styled-components";
-import StarbucksIcon from "../assets/starbucks-icon.png";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import IconButton from "@material-ui/core/IconButton";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import RefreshIcon from "@material-ui/icons/Refresh";
 
-const SideBarWrapper = styled.div`
-    flex: 0.1;
-    height: 100vh;
-    /* max-width: 60px; */
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+const NavBarMobileWrapper = styled.div`
+    display: none;
 
     @media screen and (max-width: 768px) {
-        display: none;
+        display: block;
+        position: sticky;
+        bottom: 0;
     }
-`;
-
-const Icon = styled.img`
-    height: 40px;
-    object-fit: contain;
-    padding: 20px 10px 0 10px;
 `;
 
 const NavLinksWrapper = styled.div`
     display: flex;
-    flex-direction: column;
-    gap: 2em;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0.5em;
+
     * {
         color: #00704a;
     }
 `;
 
-const LogoutWrapper = styled.div`
-    margin-bottom: 2em;
-    * {
-        color: #00704a;
-    }
-`;
-
-function SideBar() {
+function NavBarMobile() {
     return (
-        <SideBarWrapper>
-            <Icon src={StarbucksIcon} alt="starbucks icon" />
+        <NavBarMobileWrapper>
             <NavLinksWrapper>
                 <IconButton>
                     <MailOutlineIcon />
@@ -62,15 +46,12 @@ function SideBar() {
                 <IconButton>
                     <RefreshIcon />
                 </IconButton>
-            </NavLinksWrapper>
-
-            <LogoutWrapper>
                 <IconButton>
                     <ExitToAppIcon />
                 </IconButton>
-            </LogoutWrapper>
-        </SideBarWrapper>
+            </NavLinksWrapper>
+        </NavBarMobileWrapper>
     );
 }
 
-export default SideBar;
+export default NavBarMobile;

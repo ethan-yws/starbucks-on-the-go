@@ -6,6 +6,10 @@ const RankingsWrapper = styled.div`
     display: flex;
     padding-left: 1.5em;
     padding-top: 2em;
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 const PerfectCoffeesWrapper = styled.div`
